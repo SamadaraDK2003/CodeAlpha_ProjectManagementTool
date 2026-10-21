@@ -1,0 +1,13 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>TaskFlow – Project Management Tool</title><link rel="stylesheet" href="style.css"></head><body>
+<div id="auth" class="center"><div class="card"><h1>TaskFlow</h1><p class="muted" id="authMode">Log in to continue</p>
+<input id="name" placeholder="Name" class="hide"><input id="email" placeholder="Email" type="email"><input id="password" placeholder="Password" type="password">
+<button id="authBtn">Log in</button><p class="muted"><a href="#" id="toggle">Need an account? Register</a></p><p id="authErr" class="err"></p></div></div>
+<div id="app" class="hide"><header><b>TaskFlow</b><span id="projTitle"></span><div class="right">
+<div class="bell" id="bell">🔔<span id="badge" class="badge hide">0</span><div id="notifs" class="dropdown hide"></div></div>
+<span id="me"></span><button class="ghost" id="logout">Logout</button></div></header>
+<div class="layout"><aside><h3>Projects</h3><div id="projects"></div><div class="row"><input id="newProject" placeholder="New project"><button id="addProject">+</button></div></aside>
+<main id="main"><p class="muted">Select or create a project.</p></main></div></div>
+<div id="modal" class="modal hide"><div class="card wide"><button class="ghost close" id="closeModal">✕</button><div id="modalBody"></div></div></div>
+<div id="toast" class="toast hide"></div>
+<script src="/socket.io/socket.io.js"></script><script src="app.js"></script></body></html>
